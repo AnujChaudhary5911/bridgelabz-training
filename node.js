@@ -1,8 +1,10 @@
-
+const {reverse,upper} =require("./export.js");
 const os=require('os');
-setTimeout(()=>{
-console.log(os.platform())
-console.log(os.hostname())
-console.log(os.cpus())
+const fs=require('fs');
 
-},10000)
+ fs.readFile("a.txt","utf-8",(err,data)=>{
+    const anuj=data.length;
+
+    fs.appendFileSync("b.txt",anuj.toString());
+    console.log("your work is done");
+ })
